@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        header{
+            background-color: #24d1d1;
+                border-bottom-style:solid;
+            border-bottom-color: lightgray;
+            border-bottom-width: 8px;
+            padding: 5px;
+        }
+        img{
+            width: 5vw; /* viewport width - ширина окна браузера */
+            min-width: 35px;
+            max-width: 70px;
+            vertical-align: middle;
+                margin: 5px;
+        }
+        h1{
+            display:inline;
+                vertical-align: middle;
+            font-size: clamp(20px, 2.5vw 32px)
+        }
+        a{
+            background-color: #43af12;
+            color:blueviolet;
+            padding: clamp(3px, 1.75vw, 20px); /* функция() */
+            display: inline-block;
+            margin: 10px clamp(10px, 2vw, 700px);
+            text-decoration: none;
+            font-size: clamp(12px, 2vw, 16px)
+        }
+        a:hover{
+            background-color: darkblue;
+            text-decoration:underline;
+        }
+        nav {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+   <header>
+      <img src="https://cdn-icons-png.flaticon.com/512/11413/11413176.png" alt="">
+       <h1>Заголовок_1</h1>
+       <nav>
+           <a href="">КНОПКА</a>
+           <a href="">КНОПКА</a>
+           <a href="">КНОПКА</a>
+           <a href="">КНОПКА</a>
+       </nav>
+   </header> 
+</body>
+</html>
