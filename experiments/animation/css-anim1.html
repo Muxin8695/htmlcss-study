@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        body div{
+            display: inline-block;
+        }
+        .box {
+            background-color: antiquewhite;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            opacity: 0;
+            animation-name: fadeOut;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+
+        .box2 {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            opacity: 0;
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+
+        .box3 {
+            background-color: burlywood;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            animation-name: scalePulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+        
+        .box4 {
+            background-color:blueviolet;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            animation-name: rotateMove;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+        @keyframes rotateMove{
+
+           50% {
+                transform: translateX(100%) rotate(90deg);
+                
+            }
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+        
+        @keyframes scalePulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            0 {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .hero{
+            background-color: black;
+            color: white;
+            display: block;
+            height: 200px;
+            
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: heroAnim 2s forwards;
+        }
+        
+        @keyframes heroAnim{
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <br>
+    <br>
+    <div class="box2">
+
+    </div>
+    <br>
+    <br>
+    <div class="box3">
+
+    </div>
+    <br>
+    <br>
+    
+    <div class="box4">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="hero">
+       <h1> заголовок </h1>
+    </div>
+</body></html>
