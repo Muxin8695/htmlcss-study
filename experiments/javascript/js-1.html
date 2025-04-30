@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button{
+            display: block;
+            margin: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+  <h1>Javascript #1</h1>
+  <button onclick="console.log('эта кнопка работает!')">кнопка</button>
+  <p id="volume">громкость: 50</p>
+  <button onclick="AddVol()">добавить +1</button>
+  <button onclick="SubtractVol()">убавить -1</button>
+  
+  <p>Число 1</p>
+  <input type="text" id="input1">
+  
+  <p>Число 2</p>
+  <input type="text" id="input2">
+  
+  <button onclick="InpAdd()">сложить</button>
+  <p id="otvet">ОТВЕТ :</p>
+  
+   <script>
+       //вывод в консоль
+       console.log(1234)
+       
+       //текст (строки)
+       console.log("Hello World", "привет мир", 2025);
+       
+       console.log("год:" + 2025)
+       
+       //арифметика
+       console.log(2+2, 2-2, 2*2, 2/2)
+       
+       console.log(2+2/2+2, (2+2)/(2+2))
+       
+       //логика
+       console.log(1000 > 100, 1000 < 100)
+       
+       console.log(1 / 0)
+      
+       console.log(1 /(4 > 2)) 
+       
+       console.log(1 /(4 < 2)) 
+       
+       console.log(true + false, true * false)
+       
+       console.log(1 / ((4 > 2) * (6 < 3)) )
+       console.log(1 / ((4 > 2) + (6 < 3)) )
+       
+       console.log(2 == 2)
+       console.log(2 != 2)
+       
+       //переменные (varieble) 
+       var chislo = 1234
+       console.log(chislo)
+       
+       chislo = chislo - 4
+       chislo = chislo - 30
+       console.log(chislo)
+       
+       console.log(chislo - 4)
+       console.log(chislo - 30)
+       
+       
+       var chislo1 = 5
+       var chislo2 = 7
+       var chisloSumma
+       
+       chisloSumma = chislo1 + chislo2
+       console.log(chisloSumma)
+       
+       var num1 = 8
+       var num2 = 12
+       
+       function myFunc(){
+           console.log("это моя функция!")
+       }
+       
+       myFunc()
+       
+       function Greetings(name){
+         console.log("Привет", name)  
+       }
+       
+       Greetings("Боб")
+       Greetings("Петя")
+       
+       var numSum
+       
+       function AddNumbs(a,b){
+           numSum =a + b
+       }
+       
+       AddNumbs(5,7)
+       console.log(numSum)
+       
+       var n1 = 5
+       var n2 = 2
+       var n3 = 7
+       
+       function Add(a,b){
+           return a + b
+       }
+       
+       function Subtract(a,b){
+           return a - b
+       }
+       
+       console.log(Add(9,8))
+       
+       console.log(Subtract(Add(n1,n2),n3))
+       
+       var volumeSign = document.querySelector("#volume")
+       
+       var volume = 50;
+       
+       
+       
+       function SubtractVol(){
+           volume = volume - 1
+           console.log("volume: ", volume)
+           volumeSign.textContent = "Громкость: " + volume
+       }
+       
+       function AddVol(){
+           volume = volume + 1
+           console.log("volume: ", volume)
+           volumeSign.textContent = "Громкость: " + volume
+       }
+       
+       console.log(document.querySelector("#volume").textContent)
+       
+       
+       var input1 = document.querySelector("#input1")
+       var input2 = document.querySelector("#input2")
+       
+       var otvet = document.querySelector("#otvet")
+       
+       function InpAdd(){
+           otvet.textContent = input1.value + input2.value;
+           
+       }
+       
+   </script>
+    
+</body>
+</html>
