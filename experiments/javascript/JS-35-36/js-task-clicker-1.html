@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqeX9YTZz4I4YPCR0CnpO0Qg0NNni7foHOf4mNbjvrLUAu3EgfzuCgsgC4lRsNmrD29ZE&usqp=CAU" alt="" onclick="ddd()">
+    <p></p>
+    <script>
+        var flower = localStorage.getItem("clickerPoints");
+
+        function ddd() {
+
+            flower++;
+            localStorage.setItem("clickerPoints",flower)
+            
+            document.querySelector("p").textContent = flower;
+        }
+                
+        
+        document.querySelector("p").textContent = localStorage.getItem("clickerPoints")
+    </script>
+
+</body></html>
